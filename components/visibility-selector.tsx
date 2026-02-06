@@ -68,15 +68,6 @@ export function VisibilitySelector({
           className
         )}
       >
-        <Button
-          className="hidden h-8 md:flex md:h-fit md:px-2"
-          data-testid="visibility-selector"
-          variant="outline"
-        >
-          {selectedVisibility?.icon}
-          <span className="md:sr-only">{selectedVisibility?.label}</span>
-          <ChevronDownIcon />
-        </Button>
       </DropdownMenuTrigger>
 
       <DropdownMenuContent align="start" className="min-w-[300px]">
