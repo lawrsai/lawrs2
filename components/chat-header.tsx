@@ -67,46 +67,80 @@ function PureChatHeader({
       </header>
 
       <Dialog open={showSupreme} onOpenChange={setShowSupreme}>
-        <DialogContent className="max-w-md rounded-2xl p-8">
-          <DialogHeader className="text-center sm:text-center">
-            <DialogTitle className="text-2xl font-bold tracking-tight">
-              LAWRS SUPREME
-            </DialogTitle>
-            <DialogDescription className="pt-1 text-base text-foreground/70">
-              Our most advanced legal AI for serious legal work.
-            </DialogDescription>
-          </DialogHeader>
+        <DialogContent className="overflow-hidden border-0 bg-transparent p-0 shadow-2xl max-w-[420px]">
+          <DialogTitle className="sr-only">LAWRS SUPREME</DialogTitle>
+          <DialogDescription className="sr-only">Upgrade to LAWRS SUPREME</DialogDescription>
+          {/* Outer glow border wrapper */}
+          <div className="rounded-2xl bg-gradient-to-br from-zinc-300 via-zinc-100 to-zinc-300 p-[1px] shadow-[0_0_60px_-15px_rgba(0,0,0,0.2)] dark:from-zinc-600 dark:via-zinc-400 dark:to-zinc-600">
+            {/* Card body */}
+            <div className="relative rounded-2xl bg-gradient-to-b from-zinc-950 to-zinc-900 px-8 py-10 text-white">
+              {/* Subtle radial glow at top */}
+              <div className="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.08),transparent_60%)]" />
 
-          <ul className="space-y-3 pt-2 text-sm text-foreground/80">
-            <li className="flex gap-2">
-              <span className="shrink-0">&#8226;</span>
-              Instantly analyze thousands of cases, statutes, and judicial opinions
-            </li>
-            <li className="flex gap-2">
-              <span className="shrink-0">&#8226;</span>
-              Draft full motions, briefs, and memoranda in minutes
-            </li>
-            <li className="flex gap-2">
-              <span className="shrink-0">&#8226;</span>
-              Spot issues, frame arguments, and structure analysis with precision
-            </li>
-            <li className="flex gap-2">
-              <span className="shrink-0">&#8226;</span>
-              Built for attorneys, clerks, and law students who need results — fast
-            </li>
-          </ul>
+              {/* Badge */}
+              <div className="relative flex justify-center">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-zinc-700 bg-zinc-800/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-zinc-300">
+                  <span className="inline-block size-1.5 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.6)]" />
+                  Premium
+                </span>
+              </div>
 
-          <p className="pt-2 text-center text-sm font-medium italic text-muted-foreground">
-            Not a chatbot. A legal work engine.
-          </p>
+              {/* Title */}
+              <h2 className="relative mt-6 text-center text-3xl font-bold tracking-tight">
+                LAWRS{" "}
+                <span className="bg-gradient-to-r from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent">
+                  SUPREME
+                </span>
+              </h2>
 
-          <div className="flex flex-col items-center gap-3 pt-4">
-            <p className="text-3xl font-bold">
-              $25 <span className="text-base font-normal text-muted-foreground">/ mo</span>
-            </p>
-            <Button className="w-full rounded-lg bg-zinc-900 py-5 text-base text-zinc-50 hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200">
-              Get SUPREME
-            </Button>
+              <p className="relative mt-2 text-center text-sm text-zinc-400">
+                Our most advanced legal AI for serious legal work.
+              </p>
+
+              {/* Divider */}
+              <div className="relative my-6 h-px bg-gradient-to-r from-transparent via-zinc-700 to-transparent" />
+
+              {/* Features */}
+              <ul className="relative space-y-4 text-[13px] leading-relaxed text-zinc-300">
+                <li className="flex gap-3">
+                  <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-zinc-800 text-[10px] text-emerald-400 ring-1 ring-zinc-700">&#10003;</span>
+                  Instantly analyze thousands of cases, statutes, and judicial opinions
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-zinc-800 text-[10px] text-emerald-400 ring-1 ring-zinc-700">&#10003;</span>
+                  Draft full motions, briefs, and memoranda in minutes
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-zinc-800 text-[10px] text-emerald-400 ring-1 ring-zinc-700">&#10003;</span>
+                  Spot issues, frame arguments, and structure analysis with precision
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-zinc-800 text-[10px] text-emerald-400 ring-1 ring-zinc-700">&#10003;</span>
+                  Built for attorneys, clerks, and law students who need results — fast
+                </li>
+              </ul>
+
+              {/* Tagline */}
+              <p className="relative mt-6 text-center text-xs font-medium tracking-wide text-zinc-500 italic">
+                Not a chatbot. A legal work engine.
+              </p>
+
+              {/* Divider */}
+              <div className="relative my-6 h-px bg-gradient-to-r from-transparent via-zinc-700 to-transparent" />
+
+              {/* Price */}
+              <div className="relative text-center">
+                <p className="text-4xl font-bold tracking-tight">
+                  $25
+                  <span className="ml-1 text-base font-normal text-zinc-500">/ mo</span>
+                </p>
+              </div>
+
+              {/* CTA */}
+              <Button className="relative mt-6 w-full rounded-xl bg-gradient-to-r from-white to-zinc-200 py-6 text-base font-semibold text-zinc-900 shadow-[0_0_20px_rgba(255,255,255,0.15)] transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.25)] hover:from-zinc-100 hover:to-zinc-300">
+                Get SUPREME
+              </Button>
+            </div>
           </div>
         </DialogContent>
       </Dialog>
