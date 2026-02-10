@@ -3,7 +3,7 @@
 import type { UseChatHelpers } from "@ai-sdk/react";
 import type { UIMessage } from "ai";
 import equal from "fast-deep-equal";
-import { CheckIcon, LockIcon } from "lucide-react";
+import { CheckIcon } from "lucide-react";
 import Image from "next/image";
 import {
   type ChangeEvent,
@@ -474,13 +474,13 @@ function PureModelSelectorCompact({
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button className="h-8 gap-1.5 px-2.5" variant="ghost">
+        <Button className="h-9 gap-2 px-3" variant="ghost">
           {selectedModel.name === "SUPREME" ? (
-            <LockIcon className="size-3.5" />
+            <svg className="size-5 text-current" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0110 0v4" /><circle cx="12" cy="16.5" r="1" /></svg>
           ) : (
-            <Image alt="" className="size-3.5 dark:invert" height={14} src="/images/lawrs-icon.png" width={14} />
+            <Image alt="" className="size-5 dark:invert" height={20} src="/images/lawrs-icon.png" width={20} />
           )}
-          <span className="text-sm font-medium">{selectedModel.name}</span>
+          <span className="text-sm font-semibold">{selectedModel.name}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start" sideOffset={6}>
@@ -496,14 +496,14 @@ function PureModelSelectorCompact({
                 onModelChange?.(model.id);
                 setCookie("chat-model", model.id);
               }}
-              className="flex items-center gap-2"
+              className="flex items-center gap-2.5 py-2"
             >
               {model.name === "SUPREME" ? (
-                <LockIcon className="size-4" />
+                <svg className="size-5 text-current" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0110 0v4" /><circle cx="12" cy="16.5" r="1" /></svg>
               ) : (
-                <Image alt="" className="size-4 dark:invert" height={16} src="/images/lawrs-icon.png" width={16} />
+                <Image alt="" className="size-5 dark:invert" height={20} src="/images/lawrs-icon.png" width={20} />
               )}
-              <span className="font-medium">{model.name}</span>
+              <span className="font-semibold">{model.name}</span>
               {model.id === selectedModel.id && (
                 <CheckIcon className="ml-auto size-4" />
               )}
