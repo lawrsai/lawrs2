@@ -110,7 +110,7 @@ function PureChatHeader({
                   </span>
                 </div>
 
-                <Button className="mt-3 h-12 w-full rounded-xl bg-gradient-to-r from-[#0f172a] via-[#1d4ed8] to-[#0f172a] text-sm font-semibold text-white shadow-[0_10px_24px_rgba(29,78,216,0.4)] transition-all hover:brightness-110 dark:from-[#dbeafe] dark:via-white dark:to-[#dbeafe] dark:text-slate-900">
+                <Button className="mt-3 h-12 w-full rounded-xl bg-gradient-to-r from-[#f9a8d4] via-[#f472b6] to-[#e879a8] text-sm font-semibold text-white shadow-[0_0_20px_rgba(244,114,182,0.5),0_0_40px_rgba(244,114,182,0.25)] transition-all hover:shadow-[0_0_28px_rgba(244,114,182,0.65),0_0_50px_rgba(244,114,182,0.35)] hover:brightness-105 dark:from-[#f9a8d4] dark:via-[#f472b6] dark:to-[#e879a8] dark:text-white">
                   Activate SUPREME
                 </Button>
               </div>
