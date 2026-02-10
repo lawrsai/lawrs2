@@ -74,80 +74,65 @@ function PureChatHeader({
       </header>
 
       <Dialog open={showSupreme} onOpenChange={setShowSupreme}>
-        <DialogContent className="overflow-hidden border-0 bg-transparent p-0 shadow-2xl max-w-[420px]">
+        <DialogContent className="max-w-[420px] overflow-hidden overflow-y-auto max-h-[90vh] rounded-2xl border border-zinc-200 bg-white p-0 shadow-xl dark:border-zinc-700 dark:bg-zinc-900">
           <DialogTitle className="sr-only">LAWRS SUPREME</DialogTitle>
           <DialogDescription className="sr-only">Upgrade to LAWRS SUPREME</DialogDescription>
-          {/* Outer glow border wrapper */}
-          <div className="rounded-2xl bg-gradient-to-br from-zinc-300 via-zinc-100 to-zinc-300 p-[1px] shadow-[0_0_60px_-15px_rgba(0,0,0,0.2)] dark:from-zinc-600 dark:via-zinc-400 dark:to-zinc-600">
-            {/* Card body */}
-            <div className="relative rounded-2xl bg-gradient-to-b from-zinc-950 to-zinc-900 px-8 py-10 text-white">
-              {/* Subtle radial glow at top */}
-              <div className="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.08),transparent_60%)]" />
 
-              {/* Badge */}
-              <div className="relative flex justify-center">
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-zinc-700 bg-zinc-800/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-zinc-300">
-                  <span className="inline-block size-1.5 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.6)]" />
-                  Premium
-                </span>
+          <div className="px-7 pt-8 pb-7">
+            {/* Title */}
+            <h2 className="text-[1.7rem] font-semibold tracking-tight text-foreground">
+              SUPREME
+            </h2>
+
+            {/* Price */}
+            <div className="mt-3 flex items-baseline gap-1.5">
+              <span className="text-sm align-top text-muted-foreground">$</span>
+              <span className="text-5xl font-semibold tracking-tight text-foreground">25</span>
+              <div className="ml-1 flex flex-col text-xs leading-tight text-muted-foreground">
+                <span>USD /</span>
+                <span>month</span>
               </div>
-
-              {/* Title */}
-              <h2 className="relative mt-6 text-center text-3xl font-bold tracking-tight">
-                LAWRS{" "}
-                <span className="bg-gradient-to-r from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent">
-                  SUPREME
-                </span>
-              </h2>
-
-              <p className="relative mt-2 text-center text-sm text-zinc-400">
-                Our most advanced legal AI for serious legal work.
-              </p>
-
-              {/* Divider */}
-              <div className="relative my-6 h-px bg-gradient-to-r from-transparent via-zinc-700 to-transparent" />
-
-              {/* Features */}
-              <ul className="relative space-y-4 text-[13px] leading-relaxed text-zinc-300">
-                <li className="flex gap-3">
-                  <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-zinc-800 text-[10px] text-emerald-400 ring-1 ring-zinc-700">&#10003;</span>
-                  Instantly analyze thousands of cases, statutes, and judicial opinions
-                </li>
-                <li className="flex gap-3">
-                  <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-zinc-800 text-[10px] text-emerald-400 ring-1 ring-zinc-700">&#10003;</span>
-                  Draft full motions, briefs, and memoranda in minutes
-                </li>
-                <li className="flex gap-3">
-                  <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-zinc-800 text-[10px] text-emerald-400 ring-1 ring-zinc-700">&#10003;</span>
-                  Spot issues, frame arguments, and structure analysis with precision
-                </li>
-                <li className="flex gap-3">
-                  <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-zinc-800 text-[10px] text-emerald-400 ring-1 ring-zinc-700">&#10003;</span>
-                  Built for attorneys, clerks, and law students who need results — fast
-                </li>
-              </ul>
-
-              {/* Tagline */}
-              <p className="relative mt-6 text-center text-xs font-medium tracking-wide text-zinc-500 italic">
-                Not a chatbot. A legal work engine.
-              </p>
-
-              {/* Divider */}
-              <div className="relative my-6 h-px bg-gradient-to-r from-transparent via-zinc-700 to-transparent" />
-
-              {/* Price */}
-              <div className="relative text-center">
-                <p className="text-4xl font-bold tracking-tight">
-                  $25
-                  <span className="ml-1 text-base font-normal text-zinc-500">/ mo</span>
-                </p>
-              </div>
-
-              {/* CTA */}
-              <Button className="relative mt-6 w-full rounded-xl bg-gradient-to-r from-white to-zinc-200 py-6 text-base font-semibold text-zinc-900 shadow-[0_0_20px_rgba(255,255,255,0.15)] transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.25)] hover:from-zinc-100 hover:to-zinc-300">
-                Get SUPREME
-              </Button>
             </div>
+
+            {/* Subtitle */}
+            <p className="mt-4 text-sm text-muted-foreground">
+              Our most advanced legal AI for serious legal work.
+            </p>
+
+            {/* CTA */}
+            <Button
+              className="mt-5 w-full rounded-full bg-zinc-900 py-5 text-sm font-medium text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
+            >
+              Get SUPREME
+            </Button>
+
+            {/* Divider */}
+            <div className="my-7 h-px bg-zinc-200 dark:bg-zinc-700" />
+
+            {/* Features */}
+            <ul className="space-y-5">
+              <li className="flex items-start gap-3.5">
+                <svg className="mt-0.5 size-5 shrink-0 text-zinc-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12l2 2 4-4" /><circle cx="12" cy="12" r="10" /></svg>
+                <span className="text-sm text-foreground">Instantly analyze thousands of cases, statutes, and judicial opinions</span>
+              </li>
+              <li className="flex items-start gap-3.5">
+                <svg className="mt-0.5 size-5 shrink-0 text-zinc-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /></svg>
+                <span className="text-sm text-foreground">Draft full motions, briefs, and memoranda in minutes</span>
+              </li>
+              <li className="flex items-start gap-3.5">
+                <svg className="mt-0.5 size-5 shrink-0 text-zinc-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+                <span className="text-sm text-foreground">Spot issues, frame arguments, and structure analysis with precision</span>
+              </li>
+              <li className="flex items-start gap-3.5">
+                <svg className="mt-0.5 size-5 shrink-0 text-zinc-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+                <span className="text-sm text-foreground">Built for attorneys, clerks, and law students who need results — fast</span>
+              </li>
+            </ul>
+
+            {/* Tagline */}
+            <p className="mt-7 text-xs text-muted-foreground">
+              Not a chatbot. A legal work engine.
+            </p>
           </div>
         </DialogContent>
       </Dialog>
