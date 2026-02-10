@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import type { User } from "next-auth";
@@ -71,7 +72,14 @@ export function AppSidebar({ user }: { user: User | undefined }) {
                   setOpenMobile(false);
                 }}
               >
-                <span className="cursor-pointer rounded-md px-2 font-semibold text-lg hover:bg-muted">
+                <span className="flex cursor-pointer items-center gap-2 rounded-md px-2 font-semibold text-lg hover:bg-muted">
+                  <Image
+                    alt="LAWRS"
+                    className="size-5 dark:invert"
+                    height={20}
+                    src="/images/lawrs-icon.png"
+                    width={20}
+                  />
                   LAWRS
                 </span>
               </Link>
