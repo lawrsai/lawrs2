@@ -72,13 +72,13 @@ export function AppSidebar({ user }: { user: User | undefined }) {
                   setOpenMobile(false);
                 }}
               >
-                <span className="flex cursor-pointer items-center gap-2 rounded-md px-2 font-semibold text-lg hover:bg-muted">
+                <span className="flex cursor-pointer items-center gap-1 rounded-md px-2 font-semibold text-lg hover:bg-muted">
                   <Image
                     alt="LAWRS"
-                    className="size-5 dark:invert"
-                    height={20}
+                    className="size-7 dark:invert"
+                    height={28}
                     src="/images/lawrs-icon.png"
-                    width={20}
+                    width={28}
                   />
                   LAWRS
                 </span>
