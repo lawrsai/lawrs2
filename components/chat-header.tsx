@@ -59,15 +59,15 @@ function PureChatHeader({
         )}
 
         <button
-          className="order-3 hidden items-center gap-2 rounded-full border border-pink-200/60 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 px-4 py-1.5 text-sm font-medium text-zinc-700 shadow-sm transition-all duration-300 hover:border-pink-300/80 hover:shadow-[0_0_16px_rgba(196,181,253,0.5)] md:ml-auto md:flex dark:border-purple-400/30 dark:from-blue-950/40 dark:via-purple-950/40 dark:to-pink-950/40 dark:text-zinc-200 dark:hover:border-purple-400/50 dark:hover:shadow-[0_0_16px_rgba(196,181,253,0.3)]"
+          className="group order-3 hidden items-center gap-1.5 rounded-full border border-purple-200/70 bg-gradient-to-r from-blue-100/60 via-purple-100/60 to-pink-100/60 px-4 py-2 text-sm font-semibold text-zinc-800 shadow-[0_0_12px_rgba(196,181,253,0.3)] transition-all duration-500 hover:border-purple-300 hover:shadow-[0_0_24px_rgba(168,85,247,0.45)] md:ml-auto md:flex dark:border-purple-500/30 dark:from-blue-900/30 dark:via-purple-900/30 dark:to-pink-900/30 dark:text-zinc-100 dark:shadow-[0_0_12px_rgba(168,85,247,0.2)] dark:hover:border-purple-400/50 dark:hover:shadow-[0_0_24px_rgba(168,85,247,0.4)]"
           onClick={() => setShowSupreme(true)}
         >
           <Image
             alt=""
-            className="size-6 dark:invert"
-            height={24}
+            className="size-7 dark:invert"
+            height={28}
             src="/images/lawrs-icon.png"
-            width={24}
+            width={28}
           />
           Unlock SUPREME
         </button>
