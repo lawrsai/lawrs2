@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { memo, useState } from "react";
 import { useWindowSize } from "usehooks-ts";
@@ -9,9 +8,8 @@ import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogHeader,
-  DialogTitle,
   DialogDescription,
+  DialogTitle,
 } from "@/components/ui/dialog";
 import { PlusIcon } from "./icons";
 import { useSidebar } from "./ui/sidebar";
@@ -59,24 +57,23 @@ function PureChatHeader({
         )}
 
         <button
-          className="group order-3 hidden items-center gap-1.5 rounded-full border border-purple-200/70 bg-gradient-to-r from-blue-100/60 via-purple-100/60 to-pink-100/60 px-4 py-2 text-sm font-semibold text-zinc-800 shadow-[0_0_12px_rgba(196,181,253,0.3)] transition-all duration-500 hover:border-purple-300 hover:shadow-[0_0_24px_rgba(168,85,247,0.45)] md:ml-auto md:flex dark:border-purple-500/30 dark:from-blue-900/30 dark:via-purple-900/30 dark:to-pink-900/30 dark:text-zinc-100 dark:shadow-[0_0_12px_rgba(168,85,247,0.2)] dark:hover:border-purple-400/50 dark:hover:shadow-[0_0_24px_rgba(168,85,247,0.4)]"
+          className="group order-3 hidden items-center gap-2 rounded-full border border-[#caa0ff] bg-gradient-to-b from-[#f5eeff] to-[#f0e6ff] px-5 py-2.5 text-sm font-semibold text-zinc-800 shadow-[0_0_0_1px_rgba(255,255,255,0.9)_inset,0_10px_30px_rgba(168,85,247,0.25)] transition-all duration-300 hover:brightness-105 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.9)_inset,0_14px_36px_rgba(168,85,247,0.35)] md:ml-auto md:flex dark:border-[#8b5cf6]/70 dark:from-[#2a1f46] dark:to-[#201734] dark:text-zinc-100 dark:shadow-[0_0_0_1px_rgba(167,139,250,0.35)_inset,0_10px_30px_rgba(59,130,246,0.18)]"
           onClick={() => setShowSupreme(true)}
+          type="button"
         >
-          <Image
-            alt=""
-            className="size-7 dark:invert"
-            height={28}
-            src="/images/lawrs-icon.png"
-            width={28}
-          />
+          <span aria-hidden="true" className="text-base leading-none">
+            📌
+          </span>
           Unlock SUPREME
         </button>
       </header>
 
-      <Dialog open={showSupreme} onOpenChange={setShowSupreme}>
+      <Dialog onOpenChange={setShowSupreme} open={showSupreme}>
         <DialogContent className="max-w-[420px] overflow-hidden overflow-y-auto max-h-[90vh] rounded-2xl border border-zinc-200 bg-white p-0 shadow-xl dark:border-zinc-700 dark:bg-zinc-900">
           <DialogTitle className="sr-only">LAWRS SUPREME</DialogTitle>
-          <DialogDescription className="sr-only">Upgrade to LAWRS SUPREME</DialogDescription>
+          <DialogDescription className="sr-only">
+            Upgrade to LAWRS SUPREME
+          </DialogDescription>
 
           <div className="px-7 pt-8 pb-7">
             {/* Title */}
@@ -87,7 +84,9 @@ function PureChatHeader({
             {/* Price */}
             <div className="mt-3 flex items-baseline justify-center gap-1.5">
               <span className="text-sm align-top text-muted-foreground">$</span>
-              <span className="text-5xl font-semibold tracking-tight text-foreground">25</span>
+              <span className="text-5xl font-semibold tracking-tight text-foreground">
+                25
+              </span>
               <div className="ml-1 flex flex-col text-xs leading-tight text-muted-foreground">
                 <span>USD /</span>
                 <span>month</span>
@@ -100,10 +99,8 @@ function PureChatHeader({
             </p>
 
             {/* CTA */}
-            <Button
-              className="mt-5 w-full rounded-full bg-zinc-900 py-5 text-sm font-medium text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
-            >
-              Get SUPREME
+            <Button className="mt-5 h-12 w-full rounded-full border-[3px] border-zinc-100 bg-gradient-to-r from-[#0f1c46] via-[#2950d7] to-[#101f47] text-sm font-semibold text-white shadow-[0_0_0_2px_rgba(10,10,12,0.95),0_10px_26px_rgba(37,99,235,0.45)] transition-all duration-300 hover:brightness-110 dark:border-zinc-300 dark:shadow-[0_0_0_2px_rgba(250,250,250,0.3),0_10px_26px_rgba(37,99,235,0.35)]">
+              Activate SUPREME Access
             </Button>
 
             {/* Divider */}
@@ -112,20 +109,76 @@ function PureChatHeader({
             {/* Features */}
             <ul className="space-y-5">
               <li className="flex items-start gap-3.5">
-                <svg className="mt-0.5 size-5 shrink-0 text-zinc-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12l2 2 4-4" /><circle cx="12" cy="12" r="10" /></svg>
-                <span className="text-sm text-foreground">Instantly analyze thousands of cases, statutes, and judicial opinions</span>
+                <svg
+                  className="mt-0.5 size-5 shrink-0 text-zinc-500"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M9 12l2 2 4-4" />
+                  <circle cx="12" cy="12" r="10" />
+                </svg>
+                <span className="text-sm text-foreground">
+                  Instantly analyze thousands of cases, statutes, and judicial
+                  opinions
+                </span>
               </li>
               <li className="flex items-start gap-3.5">
-                <svg className="mt-0.5 size-5 shrink-0 text-zinc-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /></svg>
-                <span className="text-sm text-foreground">Draft full motions, briefs, and memoranda in minutes</span>
+                <svg
+                  className="mt-0.5 size-5 shrink-0 text-zinc-500"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" x2="8" y1="13" y2="13" />
+                  <line x1="16" x2="8" y1="17" y2="17" />
+                </svg>
+                <span className="text-sm text-foreground">
+                  Draft full motions, briefs, and memoranda in minutes
+                </span>
               </li>
               <li className="flex items-start gap-3.5">
-                <svg className="mt-0.5 size-5 shrink-0 text-zinc-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
-                <span className="text-sm text-foreground">Spot issues, frame arguments, and structure analysis with precision</span>
+                <svg
+                  className="mt-0.5 size-5 shrink-0 text-zinc-500"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" x2="16.65" y1="21" y2="16.65" />
+                </svg>
+                <span className="text-sm text-foreground">
+                  Spot issues, frame arguments, and structure analysis with
+                  precision
+                </span>
               </li>
               <li className="flex items-start gap-3.5">
-                <svg className="mt-0.5 size-5 shrink-0 text-zinc-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
-                <span className="text-sm text-foreground">Built for attorneys, clerks, and law students who need results — fast</span>
+                <svg
+                  className="mt-0.5 size-5 shrink-0 text-zinc-500"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+                <span className="text-sm text-foreground">
+                  Built for attorneys, clerks, and law students who need results
+                  — fast
+                </span>
               </li>
             </ul>
 
