@@ -476,9 +476,9 @@ function PureModelSelectorCompact({
       <DropdownMenuTrigger asChild>
         <Button className="h-9 gap-2 px-3" variant="ghost">
           {selectedModel.name === "SUPREME" ? (
-            <svg className="size-5 text-current" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0110 0v4" /><circle cx="12" cy="16.5" r="1" /></svg>
+            <svg className="size-6 text-current" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="11" width="14" height="10" rx="1.5" /><path d="M8 11V7a4 4 0 118 0v4" /><line x1="12" y1="15" x2="12" y2="17" /></svg>
           ) : (
-            <Image alt="" className="size-5 dark:invert" height={20} src="/images/lawrs-icon.png" width={20} />
+            <Image alt="" className="size-6 dark:invert" height={24} src="/images/lawrs-icon.png" width={24} />
           )}
           <span className="text-sm font-semibold">{selectedModel.name}</span>
         </Button>
@@ -499,9 +499,9 @@ function PureModelSelectorCompact({
               className="flex items-center gap-2.5 py-2"
             >
               {model.name === "SUPREME" ? (
-                <svg className="size-5 text-current" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0110 0v4" /><circle cx="12" cy="16.5" r="1" /></svg>
+                <svg className="size-6 text-current" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="11" width="14" height="10" rx="1.5" /><path d="M8 11V7a4 4 0 118 0v4" /><line x1="12" y1="15" x2="12" y2="17" /></svg>
               ) : (
-                <Image alt="" className="size-5 dark:invert" height={20} src="/images/lawrs-icon.png" width={20} />
+                <Image alt="" className="size-6 dark:invert" height={24} src="/images/lawrs-icon.png" width={24} />
               )}
               <span className="font-semibold">{model.name}</span>
               {model.id === selectedModel.id && (
