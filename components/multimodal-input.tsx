@@ -3,7 +3,8 @@
 import type { UseChatHelpers } from "@ai-sdk/react";
 import type { UIMessage } from "ai";
 import equal from "fast-deep-equal";
-import { CheckIcon } from "lucide-react";
+import { CheckIcon, LockIcon } from "lucide-react";
+import Image from "next/image";
 import {
   type ChangeEvent,
   type Dispatch,
@@ -16,7 +17,6 @@ import {
 } from "react";
 import { toast } from "sonner";
 import { useLocalStorage, useWindowSize } from "usehooks-ts";
-import { ModelSelectorLogo } from "@/components/ai-elements/model-selector";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -475,7 +475,11 @@ function PureModelSelectorCompact({
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button className="h-8 gap-1.5 px-2.5" variant="ghost">
-          {provider && <ModelSelectorLogo provider={provider} />}
+          {selectedModel.name === "SUPREME" ? (
+            <LockIcon className="size-3.5" />
+          ) : (
+            <Image alt="" className="size-3.5 dark:invert" height={14} src="/images/lawrs-icon.png" width={14} />
+          )}
           <span className="text-sm font-medium">{selectedModel.name}</span>
         </Button>
       </DropdownMenuTrigger>
@@ -485,7 +489,6 @@ function PureModelSelectorCompact({
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         {chatModels.map((model) => {
-          const logoProvider = model.id.split("/")[0];
           return (
             <DropdownMenuItem
               key={model.id}
@@ -495,7 +498,11 @@ function PureModelSelectorCompact({
               }}
               className="flex items-center gap-2"
             >
-              <ModelSelectorLogo provider={logoProvider} />
+              {model.name === "SUPREME" ? (
+                <LockIcon className="size-4" />
+              ) : (
+                <Image alt="" className="size-4 dark:invert" height={16} src="/images/lawrs-icon.png" width={16} />
+              )}
               <span className="font-medium">{model.name}</span>
               {model.id === selectedModel.id && (
                 <CheckIcon className="ml-auto size-4" />
