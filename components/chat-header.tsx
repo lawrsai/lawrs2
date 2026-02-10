@@ -9,8 +9,9 @@ import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
+  DialogHeader,
   DialogTitle,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import { PlusIcon } from "./icons";
 import { useSidebar } from "./ui/sidebar";
@@ -73,12 +74,10 @@ function PureChatHeader({
         </button>
       </header>
 
-      <Dialog onOpenChange={setShowSupreme} open={showSupreme}>
+      <Dialog open={showSupreme} onOpenChange={setShowSupreme}>
         <DialogContent className="max-w-[420px] overflow-hidden overflow-y-auto max-h-[90vh] rounded-2xl border border-zinc-200 bg-white p-0 shadow-xl dark:border-zinc-700 dark:bg-zinc-900">
           <DialogTitle className="sr-only">LAWRS SUPREME</DialogTitle>
-          <DialogDescription className="sr-only">
-            Upgrade to LAWRS SUPREME
-          </DialogDescription>
+          <DialogDescription className="sr-only">Upgrade to LAWRS SUPREME</DialogDescription>
 
           <div className="px-7 pt-8 pb-7">
             {/* Title */}
@@ -89,9 +88,7 @@ function PureChatHeader({
             {/* Price */}
             <div className="mt-3 flex items-baseline justify-center gap-1.5">
               <span className="text-sm align-top text-muted-foreground">$</span>
-              <span className="text-5xl font-semibold tracking-tight text-foreground">
-                25
-              </span>
+              <span className="text-5xl font-semibold tracking-tight text-foreground">25</span>
               <div className="ml-1 flex flex-col text-xs leading-tight text-muted-foreground">
                 <span>USD /</span>
                 <span>month</span>
@@ -104,7 +101,9 @@ function PureChatHeader({
             </p>
 
             {/* CTA */}
-            <Button className="mt-5 w-full rounded-full bg-zinc-900 py-5 text-sm font-medium text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200">
+            <Button
+              className="mt-5 w-full rounded-full bg-zinc-900 py-5 text-sm font-medium text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
+            >
               Get SUPREME
             </Button>
 
@@ -114,76 +113,20 @@ function PureChatHeader({
             {/* Features */}
             <ul className="space-y-5">
               <li className="flex items-start gap-3.5">
-                <svg
-                  className="mt-0.5 size-5 shrink-0 text-zinc-500"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M9 12l2 2 4-4" />
-                  <circle cx="12" cy="12" r="10" />
-                </svg>
-                <span className="text-sm text-foreground">
-                  Instantly analyze thousands of cases, statutes, and judicial
-                  opinions
-                </span>
+                <svg className="mt-0.5 size-5 shrink-0 text-zinc-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12l2 2 4-4" /><circle cx="12" cy="12" r="10" /></svg>
+                <span className="text-sm text-foreground">Instantly analyze thousands of cases, statutes, and judicial opinions</span>
               </li>
               <li className="flex items-start gap-3.5">
-                <svg
-                  className="mt-0.5 size-5 shrink-0 text-zinc-500"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-                  <polyline points="14 2 14 8 20 8" />
-                  <line x1="16" x2="8" y1="13" y2="13" />
-                  <line x1="16" x2="8" y1="17" y2="17" />
-                </svg>
-                <span className="text-sm text-foreground">
-                  Draft full motions, briefs, and memoranda in minutes
-                </span>
+                <svg className="mt-0.5 size-5 shrink-0 text-zinc-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /></svg>
+                <span className="text-sm text-foreground">Draft full motions, briefs, and memoranda in minutes</span>
               </li>
               <li className="flex items-start gap-3.5">
-                <svg
-                  className="mt-0.5 size-5 shrink-0 text-zinc-500"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  viewBox="0 0 24 24"
-                >
-                  <circle cx="11" cy="11" r="8" />
-                  <line x1="21" x2="16.65" y1="21" y2="16.65" />
-                </svg>
-                <span className="text-sm text-foreground">
-                  Spot issues, frame arguments, and structure analysis with
-                  precision
-                </span>
+                <svg className="mt-0.5 size-5 shrink-0 text-zinc-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+                <span className="text-sm text-foreground">Spot issues, frame arguments, and structure analysis with precision</span>
               </li>
               <li className="flex items-start gap-3.5">
-                <svg
-                  className="mt-0.5 size-5 shrink-0 text-zinc-500"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                </svg>
-                <span className="text-sm text-foreground">
-                  Built for attorneys, clerks, and law students who need results
-                  — fast
-                </span>
+                <svg className="mt-0.5 size-5 shrink-0 text-zinc-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+                <span className="text-sm text-foreground">Built for attorneys, clerks, and law students who need results — fast</span>
               </li>
             </ul>
 
