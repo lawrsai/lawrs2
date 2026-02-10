@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { memo, useState } from "react";
 import { useWindowSize } from "usehooks-ts";
@@ -57,15 +58,19 @@ function PureChatHeader({
           />
         )}
 
-        <Button
-          className="order-3 hidden bg-zinc-900 px-2 text-zinc-50 hover:bg-zinc-800 md:ml-auto md:flex md:h-fit dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
+        <button
+          className="order-3 hidden items-center gap-2 rounded-full border border-pink-200/60 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 px-4 py-1.5 text-sm font-medium text-zinc-700 shadow-sm transition-all duration-300 hover:border-pink-300/80 hover:shadow-[0_0_16px_rgba(196,181,253,0.5)] md:ml-auto md:flex dark:border-purple-400/30 dark:from-blue-950/40 dark:via-purple-950/40 dark:to-pink-950/40 dark:text-zinc-200 dark:hover:border-purple-400/50 dark:hover:shadow-[0_0_16px_rgba(196,181,253,0.3)]"
           onClick={() => setShowSupreme(true)}
         >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 2L15 10L23 12L15 14L12 22L9 14L1 12L9 10L12 2Z" />
-          </svg>
+          <Image
+            alt=""
+            className="size-4 dark:invert"
+            height={16}
+            src="/images/lawrs-icon.png"
+            width={16}
+          />
           Unlock SUPREME
-        </Button>
+        </button>
       </header>
 
       <Dialog open={showSupreme} onOpenChange={setShowSupreme}>
