@@ -67,7 +67,7 @@ export const Greeting = () => {
 
   return (
     <div
-      className="mx-auto flex size-full max-w-3xl flex-col items-center justify-center px-4 pb-16 md:pb-24"
+      className="mx-auto flex size-full max-w-3xl flex-col items-center justify-center px-4 pt-24 md:pt-32"
       key="overview"
     >
       <div className="relative h-[3rem] md:h-[4.5rem] overflow-hidden w-full">
