@@ -74,52 +74,55 @@ function PureChatHeader({
       </header>
 
       <Dialog onOpenChange={setShowSupreme} open={showSupreme}>
-        <DialogContent className="max-w-[440px] overflow-hidden rounded-3xl border border-white/30 bg-gradient-to-b from-[#f8f9ff] via-white to-[#f2f4ff] p-0 shadow-[0_24px_90px_rgba(15,23,42,0.35)] dark:border-white/10 dark:from-[#0a0b16] dark:via-[#111226] dark:to-[#12162a]">
+        <DialogContent className="max-h-[90vh] max-w-[440px] overflow-hidden overflow-y-auto rounded-3xl border border-white/30 bg-gradient-to-b from-[#f8f9ff] via-white to-[#f2f4ff] p-0 shadow-[0_24px_90px_rgba(15,23,42,0.35)] dark:border-white/10 dark:from-[#0a0b16] dark:via-[#111226] dark:to-[#12162a]">
           <DialogTitle className="sr-only">LAWRS SUPREME</DialogTitle>
           <DialogDescription className="sr-only">
             Upgrade to LAWRS SUPREME
           </DialogDescription>
 
-          <div className="relative px-6 pb-5 pt-6">
+          <div className="relative px-7 pb-7 pt-8">
             <div className="pointer-events-none absolute -left-12 -top-16 h-40 w-40 rounded-full bg-indigo-400/20 blur-3xl dark:bg-indigo-500/20" />
             <div className="pointer-events-none absolute -right-12 top-24 h-40 w-40 rounded-full bg-cyan-400/20 blur-3xl dark:bg-cyan-500/15" />
 
             <div className="relative z-10">
-              <h2 className="text-center font-serif text-[1.95rem] font-bold tracking-tight text-foreground">
+              <div className="mx-auto w-fit rounded-full border border-indigo-300/60 bg-white/80 px-3 py-1 text-[0.65rem] font-semibold tracking-[0.24em] text-indigo-700 backdrop-blur dark:border-indigo-400/40 dark:bg-indigo-400/10 dark:text-indigo-200">
+                PREMIUM PLAN
+              </div>
+
+              <h2 className="mt-4 text-center text-[1.95rem] font-semibold tracking-tight text-foreground">
                 LAWRS SUPREME
               </h2>
 
-              <p className="mt-1.5 text-center text-sm text-muted-foreground">
-                Our most advanced legal AI for serious work.
+              <p className="mt-2 text-center text-sm text-muted-foreground">
+                AI operating system for elite legal teams.
               </p>
 
-              <div className="mt-4 rounded-2xl border border-white/80 bg-white/75 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_10px_30px_rgba(2,6,23,0.08)] backdrop-blur dark:border-white/10 dark:bg-white/5 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_14px_35px_rgba(0,0,0,0.35)]">
-                <div className="flex items-baseline justify-center gap-1.5">
-                  <span className="text-base text-muted-foreground">$</span>
-                  <span className="text-5xl font-semibold leading-none tracking-tight text-foreground">
-                    25
-                  </span>
-                  <div className="mb-1 ml-1 flex flex-col text-xs leading-tight text-muted-foreground">
-                    <span>USD /</span>
-                    <span>month</span>
+              <div className="mt-5 rounded-2xl border border-white/80 bg-white/75 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_10px_30px_rgba(2,6,23,0.08)] backdrop-blur dark:border-white/10 dark:bg-white/5 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_14px_35px_rgba(0,0,0,0.35)]">
+                <div className="flex items-end justify-between">
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="text-base text-muted-foreground">$</span>
+                    <span className="text-5xl font-semibold leading-none tracking-tight text-foreground">
+                      25
+                    </span>
+                    <div className="mb-1 ml-1 flex flex-col text-xs leading-tight text-muted-foreground">
+                      <span>USD /</span>
+                      <span>month</span>
+                    </div>
                   </div>
-                </div>
-
-                <div className="mt-2 flex justify-center">
                   <span className="rounded-full border border-emerald-300/80 bg-emerald-50 px-2.5 py-1 text-[0.7rem] font-semibold text-emerald-700 dark:border-emerald-400/30 dark:bg-emerald-400/10 dark:text-emerald-300">
                     Cancel anytime
                   </span>
                 </div>
 
-                <Button className="mt-3 h-12 w-full rounded-xl bg-gradient-to-r from-[#f9a8d4] via-[#f472b6] to-[#e879a8] text-sm font-semibold text-white shadow-[0_0_20px_rgba(244,114,182,0.5),0_0_40px_rgba(244,114,182,0.25)] transition-all hover:shadow-[0_0_28px_rgba(244,114,182,0.65),0_0_50px_rgba(244,114,182,0.35)] hover:brightness-105 dark:from-[#f9a8d4] dark:via-[#f472b6] dark:to-[#e879a8] dark:text-white">
-                  Activate SUPREME
+                <Button className="mt-4 h-12 w-full rounded-xl bg-gradient-to-r from-[#0f172a] via-[#1d4ed8] to-[#0f172a] text-sm font-semibold text-white shadow-[0_10px_24px_rgba(29,78,216,0.4)] transition-all hover:brightness-110 dark:from-[#dbeafe] dark:via-white dark:to-[#dbeafe] dark:text-slate-900">
+                  Activate SUPREME Access
                 </Button>
               </div>
 
-              <div className="my-4 h-px bg-gradient-to-r from-transparent via-zinc-300 to-transparent dark:via-zinc-700" />
+              <div className="my-6 h-px bg-gradient-to-r from-transparent via-zinc-300 to-transparent dark:via-zinc-700" />
 
-              <ul className="space-y-2.5">
-                <li className="flex items-start gap-3 rounded-xl border border-zinc-200/80 bg-white/70 p-3 shadow-sm backdrop-blur dark:border-zinc-700/80 dark:bg-white/5">
+              <ul className="space-y-3.5">
+                <li className="flex items-start gap-3 rounded-xl border border-zinc-200/80 bg-white/70 p-3.5 shadow-sm backdrop-blur dark:border-zinc-700/80 dark:bg-white/5">
                   <svg
                     className="mt-0.5 size-5 shrink-0 text-indigo-600 dark:text-indigo-300"
                     fill="none"
@@ -137,7 +140,7 @@ function PureChatHeader({
                     opinions
                   </span>
                 </li>
-                <li className="flex items-start gap-3 rounded-xl border border-zinc-200/80 bg-white/70 p-3 shadow-sm backdrop-blur dark:border-zinc-700/80 dark:bg-white/5">
+                <li className="flex items-start gap-3 rounded-xl border border-zinc-200/80 bg-white/70 p-3.5 shadow-sm backdrop-blur dark:border-zinc-700/80 dark:bg-white/5">
                   <svg
                     className="mt-0.5 size-5 shrink-0 text-indigo-600 dark:text-indigo-300"
                     fill="none"
@@ -156,7 +159,7 @@ function PureChatHeader({
                     Draft full motions, briefs, and memoranda in minutes
                   </span>
                 </li>
-                <li className="flex items-start gap-3 rounded-xl border border-zinc-200/80 bg-white/70 p-3 shadow-sm backdrop-blur dark:border-zinc-700/80 dark:bg-white/5">
+                <li className="flex items-start gap-3 rounded-xl border border-zinc-200/80 bg-white/70 p-3.5 shadow-sm backdrop-blur dark:border-zinc-700/80 dark:bg-white/5">
                   <svg
                     className="mt-0.5 size-5 shrink-0 text-indigo-600 dark:text-indigo-300"
                     fill="none"
@@ -174,7 +177,7 @@ function PureChatHeader({
                     precision
                   </span>
                 </li>
-                <li className="flex items-start gap-3 rounded-xl border border-zinc-200/80 bg-white/70 p-3 shadow-sm backdrop-blur dark:border-zinc-700/80 dark:bg-white/5">
+                <li className="flex items-start gap-3 rounded-xl border border-zinc-200/80 bg-white/70 p-3.5 shadow-sm backdrop-blur dark:border-zinc-700/80 dark:bg-white/5">
                   <svg
                     className="mt-0.5 size-5 shrink-0 text-indigo-600 dark:text-indigo-300"
                     fill="none"
@@ -188,13 +191,13 @@ function PureChatHeader({
                   </svg>
                   <span className="text-sm text-foreground">
                     Built for attorneys, clerks, and law students who need
-                    results - fast
+                    results — fast
                   </span>
                 </li>
               </ul>
 
-              <p className="mt-4 text-center text-base text-foreground">
-                Not a chatbot. <em>Your legal command center.</em>
+              <p className="mt-6 text-center text-base font-semibold text-foreground">
+                Not a chatbot. Your legal command center.
               </p>
             </div>
           </div>
