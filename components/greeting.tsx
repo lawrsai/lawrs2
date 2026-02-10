@@ -67,12 +67,12 @@ export const Greeting = () => {
 
   return (
     <div
-      className="mx-auto mt-4 flex size-full max-w-3xl flex-col justify-center px-4 md:mt-16 md:px-8"
+      className="mx-auto flex size-full max-w-3xl flex-col items-center justify-center px-4 pt-24 md:pt-32"
       key="overview"
     >
-      <div className="relative h-[2.25rem] md:h-[2.5rem] overflow-hidden">
+      <div className="relative h-[3rem] md:h-[4.5rem] overflow-hidden w-full">
         <span
-          className="absolute inset-0 font-semibold text-xl md:text-2xl transition-all ease-out"
+          className="absolute inset-0 text-center font-extrabold text-3xl md:text-[3.5rem] md:leading-[4.5rem] tracking-tight text-foreground transition-all ease-out"
           style={{
             transitionDuration: isExiting
               ? `${TRANSITION_OUT}ms`
@@ -88,12 +88,9 @@ export const Greeting = () => {
           {PHRASES[index]}
         </span>
       </div>
-      <div
-        className="text-xl text-zinc-500 md:text-2xl transition-opacity duration-700"
-        style={{ opacity: 1 }}
-      >
+      <p className="mt-3 text-center text-base text-zinc-500 md:text-lg">
         The most powerful tool for legal professionals
-      </div>
+      </p>
     </div>
   );
 };
