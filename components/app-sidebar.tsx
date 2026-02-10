@@ -75,10 +75,10 @@ export function AppSidebar({ user }: { user: User | undefined }) {
                 <span className="flex cursor-pointer items-center gap-1 rounded-md px-2 font-semibold text-lg hover:bg-muted">
                   <Image
                     alt="LAWRS"
-                    className="size-7 dark:invert"
-                    height={28}
+                    className="size-9 dark:invert"
+                    height={36}
                     src="/images/lawrs-icon.png"
-                    width={28}
+                    width={36}
                   />
                   LAWRS
                 </span>
