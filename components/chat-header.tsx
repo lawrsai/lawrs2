@@ -80,12 +80,12 @@ function PureChatHeader({
 
           <div className="px-7 pt-8 pb-7">
             {/* Title */}
-            <h2 className="text-[1.7rem] font-semibold tracking-tight text-foreground">
-              SUPREME
+            <h2 className="text-center text-[1.7rem] font-semibold tracking-tight text-foreground">
+              LAWRS SUPREME
             </h2>
 
             {/* Price */}
-            <div className="mt-3 flex items-baseline gap-1.5">
+            <div className="mt-3 flex items-baseline justify-center gap-1.5">
               <span className="text-sm align-top text-muted-foreground">$</span>
               <span className="text-5xl font-semibold tracking-tight text-foreground">25</span>
               <div className="ml-1 flex flex-col text-xs leading-tight text-muted-foreground">
@@ -95,7 +95,7 @@ function PureChatHeader({
             </div>
 
             {/* Subtitle */}
-            <p className="mt-4 text-sm text-muted-foreground">
+            <p className="mt-4 text-center text-sm text-muted-foreground">
               Our most advanced legal AI for serious legal work.
             </p>
 
@@ -130,7 +130,7 @@ function PureChatHeader({
             </ul>
 
             {/* Tagline */}
-            <p className="mt-7 text-xs text-muted-foreground">
+            <p className="mt-7 text-center text-base font-bold text-foreground">
               Not a chatbot. A legal work engine.
             </p>
           </div>
