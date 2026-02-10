@@ -64,10 +64,10 @@ function PureChatHeader({
         >
           <Image
             alt=""
-            className="size-4 dark:invert"
-            height={16}
+            className="size-6 dark:invert"
+            height={24}
             src="/images/lawrs-icon.png"
-            width={16}
+            width={24}
           />
           Unlock SUPREME
         </button>
