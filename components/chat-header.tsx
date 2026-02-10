@@ -85,7 +85,7 @@ function PureChatHeader({
             <div className="pointer-events-none absolute -right-12 top-24 h-40 w-40 rounded-full bg-cyan-400/20 blur-3xl dark:bg-cyan-500/15" />
 
             <div className="relative z-10">
-              <h2 className="text-center text-[1.95rem] font-semibold tracking-tight text-foreground">
+              <h2 className="text-center font-serif text-[1.95rem] font-bold tracking-tight text-foreground">
                 LAWRS SUPREME
               </h2>
 
@@ -94,17 +94,18 @@ function PureChatHeader({
               </p>
 
               <div className="mt-4 rounded-2xl border border-white/80 bg-white/75 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_10px_30px_rgba(2,6,23,0.08)] backdrop-blur dark:border-white/10 dark:bg-white/5 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_14px_35px_rgba(0,0,0,0.35)]">
-                <div className="flex items-center justify-center gap-3">
-                  <div className="flex items-baseline gap-1.5">
-                    <span className="text-base text-muted-foreground">$</span>
-                    <span className="text-5xl font-semibold leading-none tracking-tight text-foreground">
-                      25
-                    </span>
-                    <div className="mb-1 ml-1 flex flex-col text-xs leading-tight text-muted-foreground">
-                      <span>USD /</span>
-                      <span>month</span>
-                    </div>
+                <div className="flex items-baseline justify-center gap-1.5">
+                  <span className="text-base text-muted-foreground">$</span>
+                  <span className="text-5xl font-semibold leading-none tracking-tight text-foreground">
+                    25
+                  </span>
+                  <div className="mb-1 ml-1 flex flex-col text-xs leading-tight text-muted-foreground">
+                    <span>USD /</span>
+                    <span>month</span>
                   </div>
+                </div>
+
+                <div className="mt-2 flex justify-center">
                   <span className="rounded-full border border-emerald-300/80 bg-emerald-50 px-2.5 py-1 text-[0.7rem] font-semibold text-emerald-700 dark:border-emerald-400/30 dark:bg-emerald-400/10 dark:text-emerald-300">
                     Cancel anytime
                   </span>
@@ -187,13 +188,13 @@ function PureChatHeader({
                   </svg>
                   <span className="text-sm text-foreground">
                     Built for attorneys, clerks, and law students who need
-                    results — fast
+                    results - fast
                   </span>
                 </li>
               </ul>
 
-              <p className="mt-4 text-center text-base font-semibold text-foreground">
-                Not a chatbot. Your legal command center.
+              <p className="mt-4 text-center text-base text-foreground">
+                Not a chatbot. <em>Your legal command center.</em>
               </p>
             </div>
           </div>
