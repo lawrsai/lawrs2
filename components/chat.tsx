@@ -229,7 +229,7 @@ export function Chat({
           <div className="flex items-center justify-center gap-5 pb-4 pt-4">
             <a
               aria-label="Instagram"
-              className="text-muted-foreground transition-colors hover:text-foreground"
+              className="text-foreground transition-opacity hover:opacity-70"
               href="https://instagram.com/Lawrs.AI"
               rel="noopener noreferrer"
               target="_blank"
@@ -240,7 +240,7 @@ export function Chat({
             </a>
             <a
               aria-label="X"
-              className="text-muted-foreground transition-colors hover:text-foreground"
+              className="text-foreground transition-opacity hover:opacity-70"
               href="https://x.com/LawrsAI"
               rel="noopener noreferrer"
               target="_blank"
@@ -251,7 +251,7 @@ export function Chat({
             </a>
             <a
               aria-label="Threads"
-              className="text-muted-foreground transition-colors hover:text-foreground"
+              className="text-foreground transition-opacity hover:opacity-70"
               href="https://threads.net/@Lawrs.AI"
               rel="noopener noreferrer"
               target="_blank"
@@ -262,7 +262,7 @@ export function Chat({
             </a>
             <a
               aria-label="TikTok"
-              className="text-muted-foreground transition-colors hover:text-foreground"
+              className="text-foreground transition-opacity hover:opacity-70"
               href="#"
               rel="noopener noreferrer"
               target="_blank"
@@ -273,7 +273,7 @@ export function Chat({
             </a>
             <a
               aria-label="LinkedIn"
-              className="text-muted-foreground transition-colors hover:text-foreground"
+              className="text-foreground transition-opacity hover:opacity-70"
               href="#"
               rel="noopener noreferrer"
               target="_blank"
@@ -284,7 +284,7 @@ export function Chat({
             </a>
             <a
               aria-label="Facebook"
-              className="text-muted-foreground transition-colors hover:text-foreground"
+              className="text-foreground transition-opacity hover:opacity-70"
               href="#"
               rel="noopener noreferrer"
               target="_blank"
