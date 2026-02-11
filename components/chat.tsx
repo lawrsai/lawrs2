@@ -226,7 +226,7 @@ export function Chat({
             />
           )}
 
-          <div className="flex items-center justify-center gap-5 pb-4 pt-4">
+          <div className="flex items-center justify-center gap-4 pb-4 pt-8">
             <a
               aria-label="Instagram"
               className="text-foreground transition-opacity hover:opacity-70"
