@@ -168,3 +168,23 @@ export const stream = pgTable(
 );
 
 export type Stream = InferSelectModel<typeof stream>;
+
+export const lawyerProfile = pgTable("LawyerProfile", {
+  id: uuid("id").primaryKey().notNull().defaultRandom(),
+  userId: uuid("userId")
+    .notNull()
+    .references(() => user.id),
+  displayName: varchar("displayName", { length: 128 }).notNull(),
+  title: varchar("title", { length: 128 }),
+  firm: varchar("firm", { length: 256 }),
+  bio: text("bio"),
+  practiceAreas: json("practiceAreas").$type<string[]>().notNull().default([]),
+  jurisdiction: varchar("jurisdiction", { length: 128 }),
+  barAdmissions: json("barAdmissions").$type<string[]>().notNull().default([]),
+  yearsOfExperience: varchar("yearsOfExperience", { length: 32 }),
+  isPublic: boolean("isPublic").notNull().default(true),
+  createdAt: timestamp("createdAt").notNull(),
+  updatedAt: timestamp("updatedAt").notNull(),
+});
+
+export type LawyerProfile = InferSelectModel<typeof lawyerProfile>;
