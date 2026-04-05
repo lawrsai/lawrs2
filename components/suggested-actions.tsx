@@ -15,10 +15,10 @@ type SuggestedActionsProps = {
 
 function PureSuggestedActions({ chatId, sendMessage }: SuggestedActionsProps) {
 const suggestedActions = [
-  "Draft a motion using these facts and law",
-  "Deep legal research on controlling authority",
-  "Generate a deposition outline and questions",
-  "Rewrite this argument to persuade",
+  "Hallucination Audit",
+  "Deep Legal Research",
+  "Bias Review",
+  "Build Brief",
 ];
 
   return (
