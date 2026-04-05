@@ -8,7 +8,7 @@ const PHRASES = [
   "Faster Briefs",
   "Instant Discovery",
   "and More\u2026",
-  "Deeper Legal Research",
+  "Law Research System\u2122",
 ];
 
 const INITIAL_HOLD = 4000;
@@ -89,7 +89,7 @@ export const Greeting = () => {
         </span>
       </div>
       <p className="mt-3 text-center text-base text-zinc-500 md:text-lg">
-        The most powerful tool for legal professionals
+        The most powerful tools for legal professionals
       </p>
     </div>
   );
