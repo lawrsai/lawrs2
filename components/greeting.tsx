@@ -8,7 +8,7 @@ const PHRASES = [
   "Faster Briefs",
   "Instant Discovery",
   "and More\u2026",
-  "Deeper Legal Research",
+  "Law Research System\u2122",
 ];
 
 const INITIAL_HOLD = 4000;
